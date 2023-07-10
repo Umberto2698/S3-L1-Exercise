@@ -211,7 +211,7 @@ const movies = [
 const oldest = (arr) => {
   let arrYear = [];
   arr.forEach((film) => arrYear.push(parseInt(film.Year, 10)));
-  let arrYearSorted = arrYear.slice();
+  let arrYearSorted = [...arrYear];
   arrYearSorted.sort();
   let year = arrYearSorted[0];
   let position = arrYear.indexOf(year);
