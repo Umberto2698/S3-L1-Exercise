@@ -241,7 +241,7 @@ console.log("11) ", title(movies));
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
-const newest = (arr) => arr.filter((film) => film.Year >= 2000);
+const newest = (arr) => arr.filter((film) => parseInt(film.Year, 10) >= 2000);
 
 console.log("12) ", newest(movies));
 
