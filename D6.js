@@ -41,6 +41,10 @@ console.log("3) ", onlyEven(arr));
 const sum = (arr) => {
   let sum = 0;
   arr.forEach((n) => {
+    if (typeof n === "number") {
+      if (n !== NaN) {
+      }
+    }
     sum += n;
   });
   console.log("4) ", sum);
