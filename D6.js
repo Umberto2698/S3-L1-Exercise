@@ -262,6 +262,13 @@ console.log("14) ", imdbIDToFilm("tt4154756"));
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
-const yearToIndex = (year) => movies.findIndex((film) => film.Year === year);
+const yearToIndex = (year) => {
+  const index = movies.findIndex((film) => film.Year === year);
+  if (index !== -1) {
+    return movies[index];
+  } else {
+    return "Non abbiamo film di quell'anno nel nostro catalogo";
+  }
+};
 
 console.log("15) ", yearToIndex("2005"));
