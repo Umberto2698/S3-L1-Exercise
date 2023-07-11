@@ -41,11 +41,9 @@ console.log("3) ", onlyEven(arr));
 const sum = (arr) => {
   let sum = 0;
   arr.forEach((n) => {
-    if (typeof n === "number") {
-      if (n !== NaN) {
-      }
+    if (typeof n === "number" && n !== NaN) {
+      sum += n;
     }
-    sum += n;
   });
   console.log("4) ", sum);
 };
@@ -55,8 +53,9 @@ sum(arr);
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-const newSum = (arr) => arr.reduce((newSum, n) => newSum + n, 0);
-
+const newSum = (arr) =>
+  //let arrNumber = arr.filter((n) => typeof n === "number" && n !== NaN);
+  arr.reduce((newSum, n) => newSum + n, 0);
 console.log("5) ", newSum(arr));
 
 /* ESERCIZIO 6 (map)
